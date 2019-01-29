@@ -16,7 +16,7 @@ public class EmployeeDao {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try {
-			InputStream is = this.getClass().getClassLoader().getResourceAsStream("dev-db.properties");
+			InputStream is = this.getClass().getClassLoader().getResourceAsStream("prod-db.properties");
 			Properties dbProps = new Properties();
 			dbProps.load(is);
 			String driverClassName = dbProps.getProperty("driverClassName");
